@@ -1,0 +1,8 @@
+﻿  Zadanie1.cpp
+C:\Users\MSI\Desktop\InfSpec\SCI_INF\PracaNaLekcjiNr1\Zadanie1\Zadanie1\Zadanie1.cpp(8,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\MSI\Desktop\InfSpec\SCI_INF\PracaNaLekcjiNr1\Zadanie1\Zadanie1\Zadanie1.cpp(33,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\MSI\Desktop\InfSpec\SCI_INF\PracaNaLekcjiNr1\Zadanie1\Zadanie1\Zadanie1.cpp(48,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\MSI\Desktop\InfSpec\SCI_INF\PracaNaLekcjiNr1\Zadanie1\Zadanie1\Zadanie1.cpp(49,11): warning C4018: ">": niezgodność typu ze znakiem/bez znaku
+C:\Users\MSI\Desktop\InfSpec\SCI_INF\PracaNaLekcjiNr1\Zadanie1\Zadanie1\Zadanie1.cpp(71,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\MSI\Desktop\InfSpec\SCI_INF\PracaNaLekcjiNr1\Zadanie1\Zadanie1\Zadanie1.cpp(17): warning C4715: "check”: niewszystkie ścieżki kodu zwracają wartość
+  Zadanie1.vcxproj -> C:\Users\MSI\Desktop\InfSpec\SCI_INF\PracaNaLekcjiNr1\Zadanie1\Debug\Zadanie1.exe
