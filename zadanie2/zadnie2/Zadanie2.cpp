@@ -6,7 +6,7 @@
 #include <utility>
 using namespace std;
 
-
+// Przechowywanie wartosci kluczy RSA
 pair <int, int> publiczny;
 pair <int, int> prywatny;
 
@@ -21,7 +21,8 @@ bool czy_pierwsza(int n)
 	return true;
 }
 
-
+// Algorytm Euklidesa sprawdza czy liczby są względnie pierwsze
+int nwd(int a, int b) 
 {
 	return (a == 0) ? b : nwd(b % a, a);
 }
@@ -59,7 +60,8 @@ void rsaGen()
 	prywatny = make_pair(n, d);
 }
 
-
+// Funkcja 'check' sprawdza czy podany tekst jest zapisany z małych liter
+bool check(string tekst)
 {
 	for (int i = 0; i < tekst.length(); i++)
 	{
@@ -74,7 +76,8 @@ void rsaGen()
 
 class Szyfrowanie {
 	public:
-		
+		// Funkcja 'szyfrCezara' szyfruje podany tekst i zwraca zaszyfrowany tekst
+		string szyfrCezara(string tekst)
 		{
 			int wartosc;
 			cout << "Podaj wartosc przesuniecia (Wieksza od 0 i mniejsza niz 27!)" << endl;
@@ -99,7 +102,8 @@ class Szyfrowanie {
 			return tekst;
 		}
 
-		
+		// Szyfr przestawieniowy
+		string szyfrPrzestawieniowy(string tekst)
 		{
 			for (int i = 0; i < tekst.length(); i = i + 2)
 				if (i + 2 > tekst.length())
@@ -109,7 +113,8 @@ class Szyfrowanie {
 			return tekst;
 		}
 
-		
+		// Zaszyfrowanie tekstu szyfrem cezara oraz szyfrem przestawieniowym
+		string obaSzyfry(string tekst)
 		{
 			string tmp = szyfrCezara(tekst);
 			tmp = szyfrPrzestawieniowy(tmp);
@@ -119,7 +124,8 @@ class Szyfrowanie {
 
 class Odszyfrowanie {
 	public:
-		
+		// Odszyfrowanie szyfru cezara
+		void odszyfrowanieCezara(string tekst)
 		{
 			string tmp;
 			for (int j = 1; j < 27; j++)
@@ -145,7 +151,7 @@ int main()
 	Szyfrowanie szyfr;
 	Odszyfrowanie odszyfr;
 
-	
+	// Podanie tekstu do szyfrowania
 	cout << "Podaj tekst do szyfrowania (Uzyj jedynie malych liter!)\n";
 	while (true)
 	{
@@ -157,7 +163,7 @@ int main()
 			break;
 	}
 
-	
+	// Wybór opcji
 	cout << "\nWybierz opcje:" << endl;
 	cout << "1. Szyfr podstawieniowy (szyfr cezara)" << endl;
 	cout << "2. Szyfr przestawieniowy" << endl;
