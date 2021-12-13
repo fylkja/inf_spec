@@ -2,7 +2,8 @@
 #include <string>
 using namespace std;
 
-
+// Funkcja 'check' sprawdza czy podany tekst jest zapisany z małych liter
+bool check(string tekst)
 {	
 	for (int i = 0; i < tekst.length(); i++)
 	{
@@ -15,7 +16,8 @@ using namespace std;
 	}
 }
 
-
+// Funkcja 'szyfrCezara' szyfruje podany tekst i zwraca zaszyfrowany tekst
+string szyfrCezara(string tekst)
 {
 	int wartosc;
 	cout << "Podaj wartosc przesuniecia (Wieksza od 0 i mniejsza niz 27!)" << endl;
@@ -40,6 +42,8 @@ using namespace std;
 	return tekst;
 }
 
+// Szyfr przestawieniowy
+string szyfrPrzestawieniowy(string tekst)
 {
 	for (int i = 0; i < tekst.length(); i = i + 2)
 		if (i+2 > tekst.length())
@@ -49,14 +53,16 @@ using namespace std;
 	return tekst;
 }
 
-
+// Zaszyfrowanie tekstu szyfrem cezara oraz szyfrem przestawieniowym
+string obaSzyfry(string tekst)
 {
 	string tmp = szyfrCezara(tekst);
 	tmp = szyfrPrzestawieniowy(tmp);
 	return tmp;
 }
 
-
+// Odszyfrowanie szyfru cezara
+void odszyfrowanieCezara(string tekst)
 {
 	string tmp;
 	for (int j = 1; j < 27; j++)
@@ -79,7 +85,7 @@ int main()
 {
 	string tekst;
 
-	
+	// Podanie tekstu do szyfrowania
 	cout << "Podaj tekst do szyfrowania (Uzyj jedynie malych liter!)\n";
 	while (true)
 	{
@@ -91,7 +97,7 @@ int main()
 			break;
 	}
 
-	
+	// Wybór opcji
 	cout << "\nWybierz opcje:" << endl;
 	cout << "1. Szyfr podstawieniowy (szyfr cezara)" << endl;
 	cout << "2. Szyfr przestawieniowy" << endl;
